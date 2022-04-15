@@ -11,6 +11,7 @@
 
 
 header nav {
+    display: none;
     width: 100%;
     background-color: rgb(43, 43, 187);
 }
@@ -18,6 +19,7 @@ header nav {
 header .contanier {
     padding: 0;
 }
+
 /* gnb */
 .gnb {
     display: flex;
@@ -140,4 +142,33 @@ footer {
 .footer-flex-box .sns > a {
     display: inline-block;
     margin-right: 15px;
+}
+
+
+/* tablet */
+@media screen and (min-width:768px) {
+    header nav {
+        display: block;
+    }
+
+    #trigger {
+        display: none;
+    }
+
+    .gnb {
+        flex-direction: row;
+    }
+    
+    .gnb > li {
+        width: 25%;
+    }
+    
+    .gnb > li > a {
+        border-right: 1px solid rgba(255, 255, 255,0.3);
+        border-top: 0;
+    }
+
+    .gnb > li:last-child > a {
+        border-right: 0;
+    }
 }
